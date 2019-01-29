@@ -60,10 +60,6 @@ section, header, footer {
    margin: 0 auto;
 }
 
-.clearfix {
-   clear: both;
-}
-
 /*menu*/
 
 nav {
@@ -281,7 +277,15 @@ header article {
 /*get-in-touch*/
 
 .get-in-touch {
+   position: relative;
    padding-top: 50px;
+   text-align: center;
+}
+
+.get-in-touch .article-container {
+   display: inline-block;
+   text-align: left;
+   margin-right: 300px;
 }
 
 .get-in-touch .redline {
@@ -290,9 +294,10 @@ header article {
 }
 
 .get-in-touch form {
+   display: inline-block;
    width: 540px;
    height: 540px;
-   margin: 60px auto 60px;
+   margin: 60px auto 60px 0;
 }
 
 .get-in-touch fieldset {
@@ -300,15 +305,18 @@ header article {
    padding: 0;
    margin: 0;
    padding: 55px 0 55px;
+   border: none;
 }
 
 .get-in-touch fieldset input {
    display: inline-block;
    height: 55px;
-   width: 40%;
-   padding: 20px
+   width: 41.6%;
    border-radius: 5px;
    padding-left: 20px;
+   background-color: lightgray;
+   border: none;
+   margin-bottom: 10px;
 }
 
 .get-in-touch fieldset input[type="text"] {
@@ -316,7 +324,7 @@ header article {
 }
 
 .get-in-touch input[type="submit"] {
-   width: 540px;
+   width: 98.5%;
    height: 60px;
    border-radius: 5px;
    font-size: 20px;
@@ -331,8 +339,36 @@ header article {
 }
 
 .get-in-touch textarea {
-   width: 100%;
+   width: 94.5%;
    height: 220px;
+   padding-left: 20px;
+   padding-top: 20px;
+   border-radius: 5px;
+   background-color: lightgray;
+   margin-bottom: 55px;
+   border: none;
+}
+
+.contacts {
+   position: absolute;
+   bottom: 8%;
+   right: 0%;
+   width: 45%;
+   height: 52%;
+   background-color: black;
+   color: white;
+   min-height: 40%;
+}
+
+.contacts-container {
+   position: relative;
+   width: 50%;
+   top: 27%;
+   left: 70px;
+}
+
+.contacts p {
+   color: white;
 }
 
 /*footer*/
