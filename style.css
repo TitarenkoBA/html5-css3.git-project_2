@@ -41,7 +41,7 @@ p {
    color: gray;
 }
 
-section, header, footer {
+section, header {
    padding: 10px 10%;
 }
 
@@ -380,11 +380,34 @@ header article {
 /*footer*/
 
 footer {
-   vertical-align: middle;
+   line-height: 50px;
+   padding-top: 10px;
+   background-color: #312f30;
+   text-align: center;
 }
 
 footer i {
-   font-size: 35px;
+   font-size: 25px;
    margin-right: 10px;
+   color: #312f30;
+   margin: auto;
+}
+
+footer .social-icons, footer p {
+   display: inline-block;
    color: white;
+}
+
+footer .icon-box {
+   display: inline-block;
+   border-radius: 50%;
+   background-color: white;
+   width: 40px;
+   height: 40px;
+   line-height: 46px;
+}
+
+footer .social-icons {
+   margin-left: 10%;
+   padding-left: 350px;
 }
