@@ -54,7 +54,7 @@ section, header, footer {
 }
 
 .redline {
-   width: 10%;
+   width: 200px;
    height: 2px;
    background-color: #ff3f40;
    margin: 0 auto;
@@ -88,12 +88,12 @@ nav a {
    max-width: 450px;
 }
 
-.container-big {
-   max-width: 500px;
+.container-big {   
+   max-width: 540px;
 }
 
 .container-small {
-   max-width: 230px;
+   max-width: 250px;
 }
 
 /*header*/
@@ -124,16 +124,18 @@ header {
 }
 video {
    display: inline-block;
-   width: 480px;
+   width: 565px;
    height: 320px;
    background-color: darkgray;
    box-shadow: 0 0 100px -30px black;
+   position: relative;
+   top: 20px;
 }
 
 header article {
    text-align: left;
    display: inline-block;
-   margin-right: 13%;
+   margin-right: 5.5%;
 }
 
 /*do-you-know*/
@@ -143,23 +145,23 @@ header article {
    padding-top: 100px;
 }
 
-.do-you-know .container-big {
-   text-align: left;
-   display: inline-block;
-   padding-bottom: 40px;
-}
-
 .do-you-know .container-middle {
    text-align: left;
    display: inline-block;
-   margin-right: 11.5%;
+   margin-right: 7.8%;
+   padding-bottom: 50px;
    position: relative;
    top: -130px;
 }
 
+.do-you-know .container-big {
+   text-align: left;
+   display: inline-block;
+}
+
 .container-small {
    float: left;
-   margin-left: 20px;
+   padding-left: 20px;
 }
 
 .do-you-know button {
@@ -277,34 +279,36 @@ header article {
 /*get-in-touch*/
 
 .get-in-touch {
+   overflow: hidden;
    position: relative;
    padding-top: 50px;
    text-align: center;
 }
 
-.get-in-touch .article-container {
-   display: inline-block;
+.get-in-touch .container-big {
    text-align: left;
-   margin-right: 300px;
 }
 
 .get-in-touch .redline {
-   margin-left: 0;
    margin-top: 30px;
+   margin-left: 0;
 }
 
 .get-in-touch form {
-   display: inline-block;
    width: 540px;
    height: 540px;
    margin: 60px auto 60px 0;
+}
+
+.get-in-touch .form-container {
+   display: inline-block;
 }
 
 .get-in-touch fieldset {
    width: 100%;
    padding: 0;
    margin: 0;
-   padding: 55px 0 55px;
+   padding: 55px 0 20px;
    border: none;
 }
 
@@ -345,30 +349,32 @@ header article {
    padding-top: 20px;
    border-radius: 5px;
    background-color: lightgray;
-   margin-bottom: 55px;
+   margin-bottom: 20px;
    border: none;
 }
 
 .contacts {
-   position: absolute;
-   bottom: 8%;
-   right: 0%;
-   width: 45%;
-   height: 52%;
-   background-color: black;
-   color: white;
-   min-height: 40%;
+   position: relative;
+   bottom: 105px;
+   display: inline-block;
+   text-align: left;
+   margin-left: 10%;
+   padding: 105px 0 105px 100px;
 }
 
 .contacts-container {
-   position: relative;
-   width: 50%;
-   top: 27%;
-   left: 70px;
+   position: absolute;
+   width: 500%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 1);
+   z-index: -1;
 }
 
-.contacts p {
+.contacts p, .contacts h3 {
    color: white;
+   z-index: 2;
 }
 
 /*footer*/
