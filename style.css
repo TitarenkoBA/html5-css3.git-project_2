@@ -149,9 +149,9 @@ header article {
    text-align: left;
    display: inline-block;
    margin-right: 7.8%;
-   padding-bottom: 50px;
+   padding-top: 100px;
    position: relative;
-   top: -130px;
+   top: -185px;
 }
 
 .do-you-know .container-big {
@@ -180,7 +180,7 @@ header article {
 
 .feature-products {
    text-align: center;
-   margin-top: 50px;
+   margin: 50px auto 100px;
 }
 
 .feature-products a {
@@ -196,18 +196,23 @@ header article {
    margin: 0 auto 20px;
 }
 
+.feature-products .image-container {
+   max-width: 1400px;
+   margin: auto;
+}
+
 .feature-products img {
    width: 250px;
    height: 250px;
    display: inline-block;
-   margin: 0 0.5% 1% ;
+   margin: 0 0.7% 1.4%;
 }
 
 
 /*our-team*/
 
 .our-team {
-   padding-top: 50px;
+   padding: 50px auto;
 }
 
 .our-team .redline {
@@ -218,6 +223,8 @@ header article {
 .our-team a {
    color: gray;
    font-style: italic;
+   display: inline-block;
+   padding: 20px 20px 20px 0;
 }
 
 .our-team a:hover {
@@ -225,14 +232,108 @@ header article {
    font-style: italic;
 }
 
+.our-team .article-container {
+   max-width: 1400px;
+   text-align: left;
+   margin: auto;
+}
+
 .profiles {
    width: 100%;
    text-align: left;
 }
 
-.profiles a {
+/*slider*/
+
+.slider {
+   max-width: 1400px;
+   min-height: 500px;
+   position: relative;
+   text-align: center;
+   margin: 50px auto 200px;
+}
+
+.slider > input {
+   display: none;
+}
+
+.slider > input + label {
    display: inline-block;
-   padding: 20px 20px 20px 0;
+   width: 150px;
+   height: 150px;
+   cursor: pointer;
+   z-index: 100;
+   position: relative;
+   margin-right: 5px;
+   left: 21.5%;
+   top: 350px;
+}
+
+.slider > input:checked + label {
+   display: none;
+}
+
+.slider > input + label:hover {
+   outline: 75px solid rgb(0, 0, 0, 0.5);
+   outline-offset: -75px;
+}
+
+.slider > .container-profiles {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   right: 0px;
+   bottom: 0px;
+   z-index: 0;
+}
+
+.slider > div {
+   display: none;
+}
+
+.slider > input:checked + label + div {
+   display: block;
+}
+
+.slider .image {
+   display: inline-block;
+   width: 350px;
+   height: 500px;
+   margin-right: 9%;
+}
+
+.slider .image-mini {
+   width: 150px;
+   height: 150px;
+}
+
+.slider .mark {
+   background: url("imgs/team/1.jpg") 50% 50% no-repeat;
+}
+
+.slider .klark {
+   background: url("imgs/team/7.jpg") 50% 50% no-repeat;
+}
+
+.slider .shvark {
+   background: url("imgs/team/10.jpg") 50% 50% no-repeat;
+}
+
+.slider .tark {
+   background: url("imgs/team/6.jpg") 50% 50% no-repeat;
+}
+
+.slider .smark {
+   background: url("imgs/team/2.jpg") 50% 50% no-repeat;
+}
+
+.slider .about {
+   position: relative;
+   top: -50%;
+   padding-right: 80px;
+   padding-top: 250px;
+   display: inline-block;
+   text-align: left;
 }
 
 /*design tips*/
@@ -405,6 +506,7 @@ footer .icon-box {
    width: 40px;
    height: 40px;
    line-height: 46px;
+   margin-right: 10px;
 }
 
 footer .social-icons {
