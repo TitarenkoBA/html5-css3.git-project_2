@@ -238,11 +238,6 @@ header article {
    margin: auto;
 }
 
-.profiles {
-   width: 100%;
-   text-align: left;
-}
-
 /*slider*/
 
 .slider {
@@ -279,16 +274,13 @@ header article {
 }
 
 .slider > .container-profiles {
+   display: none;
    position: absolute;
    top: 0px;
    left: 0px;
    right: 0px;
    bottom: 0px;
    z-index: 0;
-}
-
-.slider > div {
-   display: none;
 }
 
 .slider > input:checked + label + div {
