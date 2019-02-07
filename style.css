@@ -66,11 +66,14 @@ nav {
    width: 100%;
    text-align: center;
    margin: 0 auto 50px;
+   font-size: 0;
 }
 
 nav a {
    display: inline-block;
    padding: 20px;
+   transition: all 0.5s;
+   font-size: 16px;
 }
 
 /*button-small*/
@@ -80,6 +83,7 @@ nav a {
    height: 50px;
    border-radius: 5px;
    font-size: 20px;
+   transition: all 0.5s;
 }
 
 /*containers*/
@@ -225,6 +229,7 @@ header article {
    font-style: italic;
    display: inline-block;
    padding: 20px 20px 20px 0;
+   transition: all 0.5s;
 }
 
 .our-team a:hover {
@@ -262,6 +267,9 @@ header article {
    margin-right: 5px;
    left: 21.5%;
    top: 350px;
+   visibility: visible;
+   opacity: 1;
+   transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
 }
 
 .slider > input:checked + label {
@@ -274,7 +282,6 @@ header article {
 }
 
 .slider > .container-profiles {
-   display: none;
    position: absolute;
    top: 0px;
    left: 0px;
@@ -283,8 +290,16 @@ header article {
    z-index: 0;
 }
 
+.slider > .container-profiles {
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0.9s;
+}
+
 .slider > input:checked + label + div {
-   display: block;
+   visibility: visible;
+   opacity: 1;
+   transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
 }
 
 .slider .image {
@@ -350,6 +365,7 @@ header article {
    background-color: #ff3f40;
    border-color: #ff3f40;
    color: white;
+   transition: all 0.5s;
 }
 
 .design-tips button:hover {
@@ -428,6 +444,7 @@ header article {
    background-color: #ff3f40;
    border-color: #ff3f40;
    color: white;
+   transition: all 0.5s;
 }
 
 .get-in-touch input[type="submit"]:hover {
