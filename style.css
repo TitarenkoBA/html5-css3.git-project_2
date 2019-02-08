@@ -499,7 +499,7 @@ footer {
 footer i {
    font-size: 25px;
    margin-right: 10px;
-   color: #312f30;
+   color: inherit;
    margin: auto;
 }
 
@@ -516,9 +516,18 @@ footer .icon-box {
    height: 40px;
    line-height: 46px;
    margin-right: 10px;
+   color: #312f30;
+   transition: all 0.5s;
+}
+
+footer .icon-box:hover {
+   background-color: #312f30;
+   color: white;
 }
 
 footer .social-icons {
    margin-left: 10%;
    padding-left: 350px;
 }
+
+
