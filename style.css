@@ -41,7 +41,7 @@ p {
    color: gray;
 }
 
-section, header, footer {
+section, header {
    padding: 10px 10%;
 }
 
@@ -54,14 +54,10 @@ section, header, footer {
 }
 
 .redline {
-   width: 10%;
+   width: 200px;
    height: 2px;
    background-color: #ff3f40;
    margin: 0 auto;
-}
-
-.clearfix {
-   clear: both;
 }
 
 /*menu*/
@@ -70,11 +66,14 @@ nav {
    width: 100%;
    text-align: center;
    margin: 0 auto 50px;
+   font-size: 0;
 }
 
 nav a {
    display: inline-block;
    padding: 20px;
+   transition: all 0.5s;
+   font-size: 16px;
 }
 
 /*button-small*/
@@ -84,6 +83,7 @@ nav a {
    height: 50px;
    border-radius: 5px;
    font-size: 20px;
+   transition: all 0.5s;
 }
 
 /*containers*/
@@ -92,12 +92,12 @@ nav a {
    max-width: 450px;
 }
 
-.container-big {
-   max-width: 500px;
+.container-big {   
+   max-width: 540px;
 }
 
 .container-small {
-   max-width: 230px;
+   max-width: 250px;
 }
 
 /*header*/
@@ -128,16 +128,18 @@ header {
 }
 video {
    display: inline-block;
-   width: 480px;
+   width: 565px;
    height: 320px;
    background-color: darkgray;
    box-shadow: 0 0 100px -30px black;
+   position: relative;
+   top: 20px;
 }
 
 header article {
    text-align: left;
    display: inline-block;
-   margin-right: 13%;
+   margin-right: 5.5%;
 }
 
 /*do-you-know*/
@@ -147,23 +149,23 @@ header article {
    padding-top: 100px;
 }
 
-.do-you-know .container-big {
-   text-align: left;
-   display: inline-block;
-   padding-bottom: 40px;
-}
-
 .do-you-know .container-middle {
    text-align: left;
    display: inline-block;
-   margin-right: 11.5%;
+   margin-right: 7.8%;
+   padding-top: 100px;
    position: relative;
-   top: -130px;
+   top: -185px;
+}
+
+.do-you-know .container-big {
+   text-align: left;
+   display: inline-block;
 }
 
 .container-small {
    float: left;
-   margin-left: 20px;
+   padding-left: 20px;
 }
 
 .do-you-know button {
@@ -182,7 +184,7 @@ header article {
 
 .feature-products {
    text-align: center;
-   margin-top: 50px;
+   margin: 50px auto 100px;
 }
 
 .feature-products a {
@@ -198,18 +200,23 @@ header article {
    margin: 0 auto 20px;
 }
 
+.feature-products .image-container {
+   max-width: 1400px;
+   margin: auto;
+}
+
 .feature-products img {
    width: 250px;
    height: 250px;
    display: inline-block;
-   margin: 0 0.5% 1% ;
+   margin: 0 0.7% 1.4%;
 }
 
 
 /*our-team*/
 
 .our-team {
-   padding-top: 50px;
+   padding: 50px auto;
 }
 
 .our-team .redline {
@@ -220,6 +227,9 @@ header article {
 .our-team a {
    color: gray;
    font-style: italic;
+   display: inline-block;
+   padding: 20px 20px 20px 0;
+   transition: all 0.5s;
 }
 
 .our-team a:hover {
@@ -227,14 +237,110 @@ header article {
    font-style: italic;
 }
 
-.profiles {
-   width: 100%;
+.our-team .article-container {
+   max-width: 1400px;
    text-align: left;
+   margin: auto;
 }
 
-.profiles a {
+/*slider*/
+
+.slider {
+   max-width: 1400px;
+   min-height: 500px;
+   position: relative;
+   text-align: center;
+   margin: 50px auto 200px;
+}
+
+.slider > input {
+   display: none;
+}
+
+.slider > input + label {
    display: inline-block;
-   padding: 20px 20px 20px 0;
+   width: 150px;
+   height: 150px;
+   cursor: pointer;
+   z-index: 100;
+   position: relative;
+   margin-right: 5px;
+   left: 21.5%;
+   top: 350px;
+   visibility: visible;
+   opacity: 1;
+   transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
+}
+
+.slider > input:checked + label {
+   display: none;
+}
+
+.slider > input + label:hover {
+   outline: 75px solid rgb(0, 0, 0, 0.5);
+   outline-offset: -75px;
+}
+
+.slider > .container-profiles {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   right: 0px;
+   bottom: 0px;
+   z-index: 0;
+}
+
+.slider > .container-profiles {
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0.9s;
+}
+
+.slider > input:checked + label + div {
+   visibility: visible;
+   opacity: 1;
+   transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
+}
+
+.slider .image {
+   display: inline-block;
+   width: 350px;
+   height: 500px;
+   margin-right: 9%;
+}
+
+.slider .image-mini {
+   width: 150px;
+   height: 150px;
+}
+
+.slider .mark {
+   background: url("imgs/team/1.jpg") 50% 50% no-repeat;
+}
+
+.slider .klark {
+   background: url("imgs/team/7.jpg") 50% 50% no-repeat;
+}
+
+.slider .shvark {
+   background: url("imgs/team/10.jpg") 50% 50% no-repeat;
+}
+
+.slider .tark {
+   background: url("imgs/team/6.jpg") 50% 50% no-repeat;
+}
+
+.slider .smark {
+   background: url("imgs/team/2.jpg") 50% 50% no-repeat;
+}
+
+.slider .about {
+   position: relative;
+   top: -50%;
+   padding-right: 80px;
+   padding-top: 250px;
+   display: inline-block;
+   text-align: left;
 }
 
 /*design tips*/
@@ -259,6 +365,7 @@ header article {
    background-color: #ff3f40;
    border-color: #ff3f40;
    color: white;
+   transition: all 0.5s;
 }
 
 .design-tips button:hover {
@@ -281,34 +388,48 @@ header article {
 /*get-in-touch*/
 
 .get-in-touch {
+   overflow: hidden;
+   position: relative;
    padding-top: 50px;
+   text-align: center;
+}
+
+.get-in-touch .container-big {
+   text-align: left;
 }
 
 .get-in-touch .redline {
-   margin-left: 0;
    margin-top: 30px;
+   margin-left: 0;
 }
 
 .get-in-touch form {
    width: 540px;
    height: 540px;
-   margin: 60px auto 60px;
+   margin: 60px auto 60px 0;
+}
+
+.get-in-touch .form-container {
+   display: inline-block;
 }
 
 .get-in-touch fieldset {
    width: 100%;
    padding: 0;
    margin: 0;
-   padding: 55px 0 55px;
+   padding: 55px 0 20px;
+   border: none;
 }
 
 .get-in-touch fieldset input {
    display: inline-block;
    height: 55px;
-   width: 40%;
-   padding: 20px
+   width: 41.6%;
    border-radius: 5px;
    padding-left: 20px;
+   background-color: lightgray;
+   border: none;
+   margin-bottom: 10px;
 }
 
 .get-in-touch fieldset input[type="text"] {
@@ -316,13 +437,14 @@ header article {
 }
 
 .get-in-touch input[type="submit"] {
-   width: 540px;
+   width: 98.5%;
    height: 60px;
    border-radius: 5px;
    font-size: 20px;
    background-color: #ff3f40;
    border-color: #ff3f40;
    color: white;
+   transition: all 0.5s;
 }
 
 .get-in-touch input[type="submit"]:hover {
@@ -331,18 +453,81 @@ header article {
 }
 
 .get-in-touch textarea {
-   width: 100%;
+   width: 94.5%;
    height: 220px;
+   padding-left: 20px;
+   padding-top: 20px;
+   border-radius: 5px;
+   background-color: lightgray;
+   margin-bottom: 20px;
+   border: none;
+}
+
+.contacts {
+   position: relative;
+   bottom: 105px;
+   display: inline-block;
+   text-align: left;
+   margin-left: 10%;
+   padding: 105px 0 105px 100px;
+}
+
+.contacts-container {
+   position: absolute;
+   width: 500%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 1);
+   z-index: -1;
+}
+
+.contacts p, .contacts h3 {
+   color: white;
+   z-index: 2;
 }
 
 /*footer*/
 
 footer {
-   vertical-align: middle;
+   line-height: 50px;
+   padding-top: 10px;
+   background-color: #312f30;
+   text-align: center;
 }
 
 footer i {
-   font-size: 35px;
+   font-size: 25px;
    margin-right: 10px;
+   color: inherit;
+   margin: auto;
+}
+
+footer .social-icons, footer p {
+   display: inline-block;
    color: white;
 }
+
+footer .icon-box {
+   display: inline-block;
+   border-radius: 50%;
+   background-color: white;
+   width: 40px;
+   height: 40px;
+   line-height: 46px;
+   margin-right: 10px;
+   color: #312f30;
+   transition: all 0.5s;
+}
+
+footer .icon-box:hover {
+   background-color: #312f30;
+   color: white;
+}
+
+footer .social-icons {
+   margin-left: 10%;
+   padding-left: 350px;
+}
+
+
